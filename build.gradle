@@ -16,7 +16,9 @@ dependencies {
 }
 
 
-
+task stage {
+    dependsOn
+}
 
 test {
     useJUnitPlatform()
