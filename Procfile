@@ -1,1 +1,1 @@
-worker:  bundle exec rake jobs:work
+worker:  -cp build/staging:build/staging/* com.bot365.app.bot365App

@@ -16,9 +16,13 @@ dependencies {
 }
 
 
-task stage {
-    dependsOn
+compileJava.options.encoding = 'UTF-8'
+
+task stage(type: Copy) {
+    from sourceSets.main.runtimeClasspath
+    into 'build/staging'
 }
+stage.dependsOn build
 
 test {
     useJUnitPlatform()
